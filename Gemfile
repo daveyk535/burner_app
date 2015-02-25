@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+#Infra
 gem 'rails', '4.1.7'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -10,11 +11,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development, :test do
-gem 'spring'       
-gem 'sqlite3'
-gem 'byebug'
-gem 'web-console'
+  gem 'spring'       
+  gem 'sqlite3'
+  gem 'byebug'
+  gem 'web-console'
+end
 
+group :test do
+  gem 'minitest-reporters'
+  gem 'mini_backtrace'
+  gem 'guard-minitest'
 end
 
 group :production do
